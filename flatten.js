@@ -15,9 +15,9 @@ const flatten = function(list) {
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅ Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${array1} !== ${array2}`);
   }
+    
+  return console.log(`🛑 Assertion Failed: ${array1} !== ${array2}`);
 };
 
 const eqArrays = function(array1, array2) {
@@ -33,6 +33,3 @@ const eqArrays = function(array1, array2) {
   
   return true;
 };
-
-//TEST CODE
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
