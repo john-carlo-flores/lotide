@@ -1,7 +1,23 @@
+const assert = require('chai').assert;
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
 
 // Test Case: Check the original array 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+describe('#tail', function() {
+  it("should return ['Lighthouse', 'Labs'] from ['Hello', 'Lighthouse', 'Labs']", function() {
+    const words = ['Hello', 'Lighthouse', 'Labs'];
+    assert.deepEqual(tail(words), ['Lighthouse', 'Labs']);
+  });
+  
+  it("should not remove elements from array", function() {
+    const words = ['Hello', 'Lighthouse', 'Labs'];
+    tail(words);
+    assert.strictEqual(words.length, 3);
+  });
+
+  it("should return [] if array is empty", function() {
+    const words = [];
+    console.log(tail(words));
+    assert.strictEqual(tail(words).length, 0);
+  });
+});
+
