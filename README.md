@@ -26,6 +26,60 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-* `function1(...)`: description
-* `function2(...)`: description
-* `function3(...)`: description
+* `head(...)`: Returns the first item in the array.
+
+  __Since__
+  +  `1.0.0`
+
+  __Arguments__
+  * array (Array): The array to process.
+
+  __Returns__
+  * (Array): Returns the first element of array.
+
+  __Example__
+  ```javascript
+  _.head(['a', 'b', 'c']);
+  // => 'a'
+
+  _.head([1, 2, 3]);
+  // => 1
+  ```
+* `middle(...)`: Returns the middle item of the first of the array.
+
+  __Since__
+  +  `1.0.0`
+
+  __Arguments__
+  * array (Array): The array to process.
+
+  __Returns__
+  * (Array): Returns the middle element of array. If the array length is even, it will return two elements.
+
+  __Example__
+  ```javascript
+  _.middle(['a', 'b', 'c']);
+  // => 'b'
+
+  _.middle([1, 2, 3, 4]);
+  // => '[2, 3]
+  ```
+* `tail(...)`: Returns every item in the array except the first item (head).
+
+  __Since__
+  +  `1.0.0`
+
+  __Arguments__
+  * array (Array): The array to process.
+
+  __Returns__
+  * (Array): Returns every item in an array except the first item.
+
+  __Example__
+  ```javascript
+  _.tail(['a', 'b', 'c']);
+  // => ['b', 'c']
+
+  _.tail([1, 2, 3, 4]);
+  // => '[2, 3, 4]
+  ```
