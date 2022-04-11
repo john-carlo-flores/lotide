@@ -1,7 +1,6 @@
 const assert = require('chai').assert;
-const tail = require('../tail');
+const tail = require('../lib/tail');
 
-// Test Case: Check the original array 
 describe('#tail', function() {
   it("should return ['Lighthouse', 'Labs'] from ['Hello', 'Lighthouse', 'Labs']", function() {
     const words = ['Hello', 'Lighthouse', 'Labs'];
@@ -20,4 +19,3 @@ describe('#tail', function() {
     assert.strictEqual(tail(words).length, 0);
   });
 });
-
