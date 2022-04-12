@@ -13,6 +13,6 @@ describe('#findKeyByValue', () => {
   });
 
   it("should return undefined when value does not exist in the object", () => {
-    assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
   });
 });
