@@ -15,7 +15,6 @@ describe('#tail', function() {
 
   it("should return [] if array is empty", function() {
     const words = [];
-    console.log(tail(words));
     assert.strictEqual(tail(words).length, 0);
   });
 });
