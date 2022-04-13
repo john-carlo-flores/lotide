@@ -1,12 +1,12 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    // return console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    return `✅ Assertion Passed: ${actual} === ${expected}`;
-
+  let message = `✅ Assertion Passed: ${actual} === ${expected}`;
+      
+  if (actual !== expected) {
+    message = `🛑 Assertion Failed: ${actual} !== ${expected}`;
   }
-    
-  // return console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  return `🛑 Assertion Failed: ${actual} !== ${expected}`;
+  
+  console.log(message);
+  return message;
 };
 
 module.exports = assertEqual;
